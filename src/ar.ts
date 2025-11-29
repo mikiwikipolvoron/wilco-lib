@@ -9,7 +9,7 @@ export interface ARItem {
 }
 
 export type ClientAREvent =
-	| { type: "anchor_success" } // Client scanned marker successfully
+	| { type: "anchor_success"; alpha: number; beta: number } // Client calibrated with orientation
 	| { type: "tap_item"; itemId: string } // Client tapped an item
 	| { type: "reaction"; emoji: string }; // Emoji reaction
 
