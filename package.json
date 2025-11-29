@@ -1,16 +1,19 @@
 {
-  "name": "@wilco/shared",
-  "version": "1.0.0",
-  "type": "module",
-  "exports": {
-      "./events": "./events.ts",
-      "./data": "./data.ts",
-      "./display": "./display.ts"
-  },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  }
+    "name": "@mikiwikipolvoron/wilco",
+    "version": "1.0.0",
+    "type": "module",
+    "exports": {
+        "./events": "./events.ts",
+        "./data": "./data.ts",
+        "./display": "./display.ts"
+    },
+    "devDependencies": {
+        "@types/bun": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    }
 }
