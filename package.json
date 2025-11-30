@@ -2,6 +2,7 @@
     "name": "@mikiwikipolvoron/wilco-lib",
     "version": "1.0.0",
     "type": "module",
+    "repository": "https://github.com/mikiwikipolvoron/wilco-lib",
     "exports": {
         "./events": "./events.ts",
         "./data": "./data.ts",
