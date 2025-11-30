@@ -1,5 +1,5 @@
 {
-    "name": "@mikiwikipolvoron/wilco",
+    "name": "@mikiwikipolvoron/wilco-lib",
     "version": "1.0.0",
     "type": "module",
     "exports": {
