@@ -1,0 +1,25 @@
+name: Build and publish types library
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    name: Build and Publish Package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Build library
+        uses: tardy-sh/actions/bun/build@main
+        with:
+          path: '.'
+      - name: Publish package
+        uses: tardy-sh/actions/bun/publish@main
+        with:
+          path: '.'
+          token: ${{ secrets.GITHUB_TOKEN }}
