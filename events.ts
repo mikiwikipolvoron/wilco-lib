@@ -14,7 +14,13 @@ import type {
 	LedSequencePayload,
 } from "./src/energizer";
 import { CLIENT_ENERGIZER_EVENTS, SERVER_ENERGIZER_EVENTS } from "./src/energizer";
-import type { ClientInstrumentsEvent, ServerInstrumentsEvent } from "./src/instruments";
+import type {
+	ClientInstrumentsEvent,
+	ServerInstrumentsEvent,
+	InstrumentId,
+	InstrumentInfo,
+	InstrumentsPhase,
+} from "./src/instruments";
 import { CLIENT_INSTRUMENT_EVENTS, SERVER_INSTRUMENT_EVENTS } from "./src/instruments";
 import type { ClientLobbyEvent, ServerLobbyEvent } from "./src/lobby";
 import { CLIENT_LOBBY_EVENTS, SERVER_LOBBY_EVENTS } from "./src/lobby";
@@ -45,6 +51,9 @@ export type {
     ServerEvent,
     ClientInstrumentsEvent,
     ServerInstrumentsEvent,
+    InstrumentId,
+    InstrumentInfo,
+    InstrumentsPhase,
     ClientLobbyEvent,
     ServerLobbyEvent,
     ClientServiceEvent,
