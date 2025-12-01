@@ -2,7 +2,17 @@ import type { ClientAREvent, ServerAREvent } from "./src/ar";
 import { CLIENT_AR_EVENTS, SERVER_AR_EVENTS } from "./src/ar";
 import type { ClientBeatsEvent, ServerBeatsEvent } from "./src/beats";
 import { CLIENT_BEATS_EVENTS, SERVER_BEATS_EVENTS } from "./src/beats";
-import type { ClientEnergizerEvent, ServerEnergizerEvent } from "./src/energizer";
+import type {
+	ClientEnergizerEvent,
+	ServerEnergizerEvent,
+	EnergizerPhase,
+	PlayerEnergy,
+	EnergizerInstructionEvent,
+	EnergizerSpotlightEvent,
+	EnergizerCell,
+	EnergizerPattern,
+	LedSequencePayload,
+} from "./src/energizer";
 import { CLIENT_ENERGIZER_EVENTS, SERVER_ENERGIZER_EVENTS } from "./src/energizer";
 import type { ClientInstrumentsEvent, ServerInstrumentsEvent } from "./src/instruments";
 import { CLIENT_INSTRUMENT_EVENTS, SERVER_INSTRUMENT_EVENTS } from "./src/instruments";
@@ -24,6 +34,13 @@ export type {
     ServerBeatsEvent,
     ClientEnergizerEvent,
     ServerEnergizerEvent,
+    EnergizerPhase,
+    PlayerEnergy,
+    EnergizerInstructionEvent,
+    EnergizerSpotlightEvent,
+    EnergizerCell,
+    EnergizerPattern,
+    LedSequencePayload,
     ClientEvent,
     ServerEvent,
     ClientInstrumentsEvent,
