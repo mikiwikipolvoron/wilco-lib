@@ -1,4 +1,9 @@
-export type ARPhase = "anchoring" | "hunting" | "boss" | "results";
+export type ARPhase =
+	| "instructions"
+	| "anchoring"
+	| "hunting"
+	| "boss"
+	| "results";
 
 export interface ARItem {
 	id: string;
@@ -21,6 +26,14 @@ export const CLIENT_AR_EVENTS = [
 
 export type ServerAREvent =
 	| { type: "ar_phase_change"; phase: ARPhase }
+	| {
+			type: "ar_instruction";
+			phase: "instructions";
+			slide: number;
+			totalSlides: number;
+			text: string;
+			durationMs: number;
+	  }
 	| { type: "ar_items_update"; items: ARItem[] }
 	| { type: "ar_boss_health"; health: number; maxHealth: number }
 	| {
@@ -37,6 +50,7 @@ export type ServerAREvent =
 
 export const SERVER_AR_EVENTS = [
 	"ar_phase_change",
+	"ar_instruction",
 	"ar_items_update",
 	"ar_boss_health",
 	"ar_item_collected",
