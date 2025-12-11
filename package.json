@@ -1,12 +1,13 @@
 {
     "name": "@mikiwikipolvoron/wilco-lib",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "type": "module",
     "repository": "https://github.com/mikiwikipolvoron/wilco-lib",
     "exports": {
         "./events": "./events.ts",
         "./data": "./data.ts",
-        "./display": "./display.ts"
+        "./display": "./display.ts",
+        "./session": "./src/session.ts"
     },
     "devDependencies": {
         "@types/bun": "latest"

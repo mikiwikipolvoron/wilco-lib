@@ -3,7 +3,13 @@ import type { ActivityId, GroupDefinitions, ServerState } from "./state";
 
 export type ClientServiceEvent =
 	| { type: "request_state" }
-	| { type: "register"; nickname?: string; role: "client" | "entertainer" };
+	| {
+			type: "register";
+			nickname?: string;
+			role: "client" | "entertainer";
+			sessionId?: string; // NEW: optional for backwards compat
+			deviceId?: string; // NEW: for reconnection
+	  };
 export const CLIENT_SERVICE_EVENTS = ["request_state", "register"] as const;
 
 export type ServerServiceEvent =
